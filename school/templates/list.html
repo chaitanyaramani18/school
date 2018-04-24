@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>list of Student </title>
+{% include 'header.html'%}
+ <title>list of Student </title>
+<hr>
+<ul>
     {% for i in obj %}
-    {{i.firstname}}{{i.lastname}}<br>
-    
+    <li>
+        {{i.firstname}}{{i.lastname}}<br>
+    </li>
     {% endfor %}
-</head>
-<body>
+</ul>
+<div class="pagination">
+    {% if obj.has_previous %}
+    <a href="?page={{obj.previous_page_number}}">
+        Previous
+    </a>
+    {% endif %}
+    {% if obj.has_next %}
+    <a href="?page={{obj.next_page_number}}">
+        NEXT
+    </a>
+        {% endif %}
 
-</body>
-</html>
+</div>
+{% include 'footer.html'%}
