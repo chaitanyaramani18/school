@@ -3,4 +3,4 @@ from .models import Student
 
 admin.site.register(Student)
 
-# Register your models here.
+# Register your models here.dsagsdgsdgasgs
