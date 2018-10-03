@@ -16,7 +16,7 @@ from .forms import UserLogInForm, UserRegisterForm
 
 # Create your views here.
 
-
+#this file need to be deleted
 
 
 def index(request):
